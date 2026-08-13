@@ -1,7 +1,13 @@
-a. Problem statement
-b. Dataset description
-c. Github Repository Link [1 mark for maintaining the github repo with all
-required files]
+a. Problem statement - Predict the presence or absence of heart disease in a patient based on clinical parameters and diagnostic features.
+
+b. Dataset description - 
+    Dataset Name: Heart Failure Prediction Dataset
+    Features(P): 12 numeric and categorical features
+    Instances(N): 918 rows
+    Target Variable: HeartDisease (Binary: 1 = Heart Disease present, 0 = Normal)
+
+c. Github Repository Link - https://github.com/russo1237/ml_2_2025ac05156
+
 d. Models used: 
 Make a Comparison Table with the evaluation metrics calculated for all the 6
 models as below:
