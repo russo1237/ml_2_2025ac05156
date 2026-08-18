@@ -39,5 +39,5 @@ Follow below steps :
 1. Create a virtual environment - python -m venv ml2
 2. Activate the virtual env -  source ml2/bin/activate/
 3. Install dependencies - pip install -r requirements.txt
-4. Run the model - python model/train_n_evaulate.py
+4. Run the model - python model/train_n_evaluate.py
 5. Run Streamlit app - streamlit run app.py
