@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import streamlit as st
+from pathlib import Path
 from sklearn.metrics import (
     ConfusionMatrixDisplay,
     accuracy_score,
@@ -19,17 +20,22 @@ from sklearn.metrics import (
 st.set_page_config(page_title="ML assign 2 : 2025AC05156@wilp.bits-pilani.ac.in :Heart Failure Predictor", layout="wide")
 
 # 1. Load artifacts
+BASE_DIR = Path(__file__).resolve().parent
+
 @st.cache_resource
 def load_models():
-    with open("model/metadata.json") as f:
+    meta_path = BASE_DIR / "model" / "metadata.json"
+    with open(meta_path, "r") as f:
         meta = json.load(f)
+
     model_paths = {
-        "Logistic Regression": "model/logistic_regression.pkl",
-        "Decision Tree": "model/decision_tree.pkl",
-        "KNN": "model/k_nearest_neighbors.pkl",
-        "Naive Bayes": "model/naive_bayes.pkl",
-        "Random Forest": "model/random_forest.pkl",
+        "Logistic Regression": BASE_DIR / "model" / "logistic_regression.pkl",
+        "Decision Tree": BASE_DIR / "model" / "decision_tree.pkl",
+        "KNN": BASE_DIR / "model" / "k_nearest_neighbors.pkl",
+        "Naive Bayes": BASE_DIR / "model" / "naive_bayes.pkl",
+        "Random Forest": BASE_DIR / "model" / "random_forest.pkl",
     }
+
     models = {name: joblib.load(path) for name, path in model_paths.items()}
     return meta, models
 
