@@ -32,3 +32,12 @@ Observations :
 | **Naive Bayes** | Solid baseline performance with a balanced Precision (0.8932) and Recall (0.9020), though slightly trailing behind the tree ensemble and kNN models. |
 | **Random Forest (Ensemble)** | Second-best overall model; significantly improves over a single Decision Tree across all metrics (Accuracy: 0.9022, AUC: 0.9321, F1: 0.9135). |
 | **Overall Winner for your dataset?** | **kNN (K-Nearest Neighbors)** is the clear winner, consistently outperforming all other models across discrimination (AUC: 0.9507), general accuracy (91.85%), and correlation balance (MCC: 0.8349). |
+
+
+To run the app locally on ur machine 
+Follow below steps :
+1. Create a virtual environment - python -m venv ml2
+2. Activate the virtual env -  source ml2/bin/activate/
+3. Install dependencies - pip install -r requirements.txt
+4. Run the model - python model/train_n_evaulate.py
+5. Run Streamlit app - streamlit run app.py
